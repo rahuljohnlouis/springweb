@@ -13,26 +13,24 @@ import com.caveofprogramming.spring.web.service.OffersService;
 @Controller
 public class OffersController {
 
-	// @RequestMapping("/")
-	// public String showHome(HttpSession session)
-	// {
-	// session.setAttribute("name", "Rahul");
-	// return "home";
-	// }
-
 	private OffersService offerService;
 
 	@Autowired
 	public void setOfferService(OffersService offerService) {
-		this.offerService = offerService;	
+		this.offerService = offerService;
 	}
 
-	@RequestMapping("/")
-	public String showHome(Model model) {
+	@RequestMapping("/offers")
+	public String showOffers(Model model) {
 		List<Offer> offers = offerService.getCurrent();
-		
-		model.addAttribute("offers",offers);
-		
-		return "home";
+
+		model.addAttribute("offers", offers);
+
+		return "offers";
+	}
+
+	@RequestMapping("/createoffer")
+	public String createOffer() {
+		return "createoffer";
 	}
 }
