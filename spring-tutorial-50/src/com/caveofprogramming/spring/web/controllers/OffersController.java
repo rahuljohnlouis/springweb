@@ -30,6 +30,17 @@ public class OffersController {
 
 		return "offers";
 	}
+
+	@RequestMapping("/createoffer")
+	public String createOffer() {
+		return "createoffer";
+	}
+	
+	@RequestMapping("/docreate")
+	public String doCreate() {
+
+		return "offercreated";
+	}
 	
 	@RequestMapping(value="/test", method=RequestMethod.GET)
 	public String showTest(Model model,@RequestParam("id")String id) {
@@ -37,9 +48,5 @@ public class OffersController {
 		
 		return "home";
 	}
-
-	@RequestMapping("/createoffer")
-	public String createOffer() {
-		return "createoffer";
-	}
+	
 }
