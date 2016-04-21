@@ -1,10 +1,18 @@
 package com.caveofprogramming.spring.web.dao;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
 public class Offer {
 
 	private int id;
+	@Size(min=5,max=100,message="Name must be between 5 and 100")
 	private String name;
+	@NotNull
+	@Pattern(regexp=".*\\@.*\\..*",message="This does not appear to be a valid email")
 	private String email;
+	@Size(min=5,max=100,message="text must be between 20 and 255")
 	private String text;
 
 	public Offer(){}
