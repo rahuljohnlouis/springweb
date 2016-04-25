@@ -16,22 +16,21 @@
 		<table class="formattable">
 
 			<tr>
-				<td class="label">Email:</td>
-				<td><sf:input class="control" path="email" name="email"
-						type="text" /><br />
-				<sf:errors path="email" cssClass="error"></sf:errors></td>
-			</tr>
-			<tr>
 				<td class="label">Name:</td>
 				<td><sf:input class="control" path="name" name="name"
-						type="text" /><br />
-				<sf:errors path="name" cssClass="error"></sf:errors></td>
+						type="text" /><br /> <sf:errors path="name" cssClass="error"></sf:errors></td>
+
+			</tr>
+			<tr>
+				<td class="label">Email:</td>
+				<td><sf:input class="control" path="email" name="email"
+						type="text" /><br /> <sf:errors path="email" cssClass="error"></sf:errors></td>
 			</tr>
 			<tr>
 				<td class="label">Offer:</td>
 				<td><sf:textarea class="control" path="text" name="text"
-						rows="10" cols="10"></sf:textarea><br />
-				<sf:errors path="text" cssClass="error"></sf:errors></td>
+						rows="10" cols="10"></sf:textarea><br /> <sf:errors path="text"
+						cssClass="error"></sf:errors></td>
 			</tr>
 			<tr>
 				<td class="label"></td>
